@@ -19,7 +19,7 @@ class BookAction extends StatelessWidget {
               title: '19.99€ ',
               textStyle: const TextStyle(
                   fontSize: 16,
-                  fontWeight: FontWeight.w900,
+                  fontWeight: FontWeight.bold,
                   color: Colors.black),
               color: Colors.white,
               topLeft: 14,
