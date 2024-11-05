@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../splash/presentation/view/widgets/books_list_view_item.dart';
 
-
 class SearchResultListView extends StatelessWidget {
   const SearchResultListView({super.key});
 

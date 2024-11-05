@@ -31,8 +31,8 @@ class HomeViewBody extends StatelessWidget {
             ],
           ),
         ),
-        SliverFillRemaining(  
-          //  i use "SliverFillRemaining" instead "SliverToBoxAdapter" to delete ShrinkWrap atripute from "BestSellerListView" and not wrap this widget with "Expanded" to avoid issues appearing in ui and make performance better 
+        SliverFillRemaining(
+          //  i use "SliverFillRemaining" instead "SliverToBoxAdapter" to delete ShrinkWrap atripute from "BestSellerListView" and not wrap this widget with "Expanded" to avoid issues appearing in ui and make performance better
           // SliverFillRemaining depend on build the appearing items
           child: BestSellerListView(),
         )

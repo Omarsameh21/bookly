@@ -11,12 +11,12 @@ class BookRating extends StatelessWidget {
     return Row(
       mainAxisAlignment: mainAxisAlignment,
       children: [
-       const Icon(
+        const Icon(
           FontAwesomeIcons.solidStar,
           color: Colors.amber,
           size: 16,
         ),
-      const  Padding(
+        const Padding(
           padding: EdgeInsets.symmetric(horizontal: 6.0),
           child: Text(
             '4.8',
