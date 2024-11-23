@@ -6,6 +6,10 @@ class ApiServices {
 
   static Future<Map<String, dynamic>> get({required String endPoint}) async {
     var response = await dio.get('$_baseURL$endPoint');
+    print(response.data.runtimeType); // لمعرفة نوع البيانات
+print(response.data); // لطباعة البيانات الفعلية
+
     return response.data;
+    
   }
 }
