@@ -11,13 +11,20 @@ class HomeRepoImpl implements HomeRepo {
   @override
   Future<Either<Failures, List<BookModel>>> fetchBestSellerBooks() async {
     try {
-      var data = await ApiServices.get(
-          endPoint: 'https://stephen-king-api.onrender.com/api/books/');
+      var data = await ApiServices.get(endPoint: 'book/30');
+      print('API Response: $data');
 
-      List<BookModel> books = [];
-      for (var element in data['villains']) {
-        books.add(BookModel.fromJson(element));
+      var bookData = data['data'];
+      if (bookData == null ||
+          bookData['villains'] == null ||
+          bookData['villains'] is! List) {
+        return left(ServerFailure(
+            "Invalid or missing 'villains' key in API response."));
       }
+
+      var villains = bookData['villains'] as List<dynamic>;
+      List<BookModel> books =
+          villains.map((e) => BookModel.fromJson(e)).toList();
 
       return right(books);
     } catch (e) {
@@ -30,14 +37,21 @@ class HomeRepoImpl implements HomeRepo {
 
   @override
   Future<Either<Failures, List<BookModel>>> fetchFeaturedBooks() async {
-   try {
-      var data = await ApiServices.get(
-          endPoint: 'https://stephen-king-api.onrender.com/api/book/19');
+    try {
+      var data = await ApiServices.get(endPoint: 'book/30');
+      print('API Response: $data');
 
-      List<BookModel> books = [];
-      for (var element in data['villains']) {
-        books.add(BookModel.fromJson(element));
+      var bookData = data['data'];
+      if (bookData == null ||
+          bookData['villains'] == null ||
+          bookData['villains'] is! List) {
+        return left(ServerFailure(
+            "Invalid or missing 'villains' key in API response."));
       }
+
+      var villains = bookData['villains'] as List<dynamic>;
+      List<BookModel> books =
+          villains.map((e) => BookModel.fromJson(e)).toList();
 
       return right(books);
     } catch (e) {
