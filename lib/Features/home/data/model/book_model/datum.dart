@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-
 import 'villain.dart';
 
 class Datum extends Equatable {

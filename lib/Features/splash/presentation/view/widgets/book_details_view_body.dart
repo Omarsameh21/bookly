@@ -25,7 +25,7 @@ class BookDetailsViewBody extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: width * 0.175),
-                  child: const CostumBookImage(),
+                  child: const CostumBookImage(imageUrl: 'https://theartandbeyond.com/wp-content/uploads/2022/04/Vintage-Color-Palett-11-min.jpg',),
                 ),
                 const SizedBox(
                   height: 40,

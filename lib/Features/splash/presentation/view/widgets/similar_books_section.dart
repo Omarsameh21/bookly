@@ -26,7 +26,7 @@ class SimilarBooksSection extends StatelessWidget {
               itemBuilder: (context, index) {
                 return const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 5),
-                  child: CostumBookImage(),
+                  child: CostumBookImage(imageUrl: 'https://theartandbeyond.com/wp-content/uploads/2022/04/Vintage-Color-Palett-11-min.jpg',),
                 );
               }),
         ),

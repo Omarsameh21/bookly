@@ -21,12 +21,15 @@ class FeaturedBooksListView extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 8),
-                    child: CostumBookImage(),
+                    child: CostumBookImage(
+                      imageUrl:
+                          'https://theartandbeyond.com/wp-content/uploads/2022/04/Vintage-Color-Palett-11-min.jpg',
+                    ),
                   );
                 }),
           );
         } else if (state is FeaturedBooksFailure) {
-          return  CostumErrorMessage(errMessage: state.errmasage);
+          return CostumErrorMessage(errMessage: state.errmasage);
         } else {
           return const CostumIndicator();
         }
